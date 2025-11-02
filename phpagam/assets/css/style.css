@@ -1,0 +1,126 @@
+:root {
+  --sea-mist: #d8e3e7;
+  --driftwood: #89a6a8;
+  --salted-sky: #bedadc;
+  --deep-ocean: #496a74;
+  --text: #333333;
+}
+
+/* Reset sederhana */
+* {
+  box-sizing: border-box;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+body {
+  margin: 0;
+  background: var(--sea-mist);
+  color: var(--text);
+}
+
+/* Navbar */
+.navbar {
+  background: var(--driftwood);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.navbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.navbar a:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+/* Card */
+.card {
+  background: var(--salted-sky);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Grid for dashboard */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+.btn-primary {
+  background: var(--deep-ocean);
+  color: white;
+}
+.btn-secondary {
+  background: var(--driftwood);
+  color: white;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 12px;
+}
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: white;
+}
+
+/* Login box */
+.login-box {
+  max-width: 420px;
+  margin: 60px auto;
+}
+
+/* Footer */
+.footer {
+  margin-top: 24px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
