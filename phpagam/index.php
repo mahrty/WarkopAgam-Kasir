@@ -162,8 +162,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
 
     <div class="footer">
-      Belum punya akun? Daftar
+      Hari Baru Semangat Baru, Semangat Bekerja
     </div>
   </div>
 </body>
 </html>
+
