@@ -24,27 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `detail_pesanan`
---
-
-CREATE TABLE `detail_pesanan` (
-  `id_detail` int(11) NOT NULL,
-  `id_pesanan` int(11) NOT NULL,
-  `id_menu` int(11) NOT NULL,
-  `jumlah` int(100) NOT NULL,
-  `subtotal` decimal(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `detail_pesanan`
---
-
-INSERT INTO `detail_pesanan` (`id_detail`, `id_pesanan`, `id_menu`, `jumlah`, `subtotal`) VALUES
-(1, 1, 1, 2, 18000.00);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `kasir`
 --
 
@@ -152,14 +131,6 @@ INSERT INTO `pesanan` (`id_pesanan`, `tanggal_pesanan`, `nama_pelanggan`, `total
 --
 
 --
--- Indexes for table `detail_pesanan`
---
-ALTER TABLE `detail_pesanan`
-  ADD PRIMARY KEY (`id_detail`),
-  ADD KEY `detail_pesanan_ibfk_1` (`id_pesanan`),
-  ADD KEY `id_menu` (`id_menu`);
-
---
 -- Indexes for table `kasir`
 --
 ALTER TABLE `kasir`
@@ -197,12 +168,6 @@ ALTER TABLE `pesanan`
 --
 
 --
--- AUTO_INCREMENT for table `detail_pesanan`
---
-ALTER TABLE `detail_pesanan`
-  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
 -- AUTO_INCREMENT for table `kasir`
 --
 ALTER TABLE `kasir`
@@ -235,13 +200,6 @@ ALTER TABLE `pesanan`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `detail_pesanan`
---
-ALTER TABLE `detail_pesanan`
-  ADD CONSTRAINT `detail_pesanan_ibfk_1` FOREIGN KEY (`id_pesanan`) REFERENCES `pesanan` (`id_pesanan`),
-  ADD CONSTRAINT `detail_pesanan_ibfk_2` FOREIGN KEY (`id_menu`) REFERENCES `menu` (`id_menu`);
 
 --
 -- Constraints for table `laporan_penjualan`
